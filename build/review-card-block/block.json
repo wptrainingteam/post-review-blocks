@@ -6,7 +6,7 @@
   "title": "Review Card Block",
   "category": "widgets",
   "icon": "smiley",
-  "description": "Example block scaffolded with Create Block tool.",
+  "description": "A review card with defaults for posts in the query loop.",
   "example": {},
   "supports": {
     "html": false
@@ -15,5 +15,16 @@
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
-  "viewScript": "file:./view.js"
+  "keywords": [
+    "rating",
+    "review"
+  ],
+  "parent": [
+    "core/post-template"
+  ],
+  "allowedBlocks": [
+    "core/post-title",
+    "create-block/rating-block",
+    "core/post-excerpt"
+  ]
 }

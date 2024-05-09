@@ -45,7 +45,7 @@ function Edit({
 }) {
   const [meta, updateMeta] = (0,_wordpress_core_data__WEBPACK_IMPORTED_MODULE_5__.useEntityProp)("postType", postType, "meta", postId);
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
-    const initStyle = meta?._ratingStyle ? meta?._ratingStyle : "heart";
+    const initStyle = meta?._ratingStyle ? meta?._ratingStyle : "star";
     setAttributes({
       rating: meta?._rating || 0,
       ratingStyle: initStyle
@@ -89,11 +89,11 @@ function Edit({
     onChange: onChangeRatingStyle,
     value: ratingStyle,
     options: [{
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Heart", "multiblock-plugin"),
-      value: "heart"
-    }, {
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Star", "multiblock-plugin"),
       value: "star"
+    }, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Heart", "multiblock-plugin"),
+      value: "heart"
     }]
   }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)()
@@ -252,7 +252,7 @@ module.exports = window["wp"]["i18n"];
   \*************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/rating-block","version":"0.1.0","title":"Rating Block","category":"widgets","icon":"star-filled","description":"Example block scaffolded with Create Block tool.","supports":{"html":false},"textdomain":"rating-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","usesContext":["postId","postType"],"attributes":{"rating":{"type":"integer","default":5},"ratingStyle":{"type":"string","default":"star"}},"example":{"attributes":{"rating":3,"ratingStyle":"star"}},"keywords":["star","rating"]}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/rating-block","version":"0.1.0","title":"Rating Block","category":"widgets","icon":"star-filled","description":"A block for rating posts.","supports":{"html":false},"textdomain":"rating-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","usesContext":["postId","postType"],"attributes":{"rating":{"type":"integer","default":5},"ratingStyle":{"type":"string","default":"star"}},"example":{"attributes":{"rating":4,"ratingStyle":"star"}},"keywords":["star","rating","review"]}');
 
 /***/ })
 

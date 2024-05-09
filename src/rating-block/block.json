@@ -6,7 +6,7 @@
 	"title": "Rating Block",
 	"category": "widgets",
 	"icon": "star-filled",
-	"description": "Example block scaffolded with Create Block tool.",
+	"description": "A block for rating posts.",
 	"supports": {
 		"html": false
 	},
@@ -28,9 +28,9 @@
   },
   "example": {
     "attributes": {
-      "rating": 3,
+      "rating": 4,
       "ratingStyle": "star"
     }
   },
-  "keywords": ["star", "rating"]
+  "keywords": ["star", "rating", "review"]
 }

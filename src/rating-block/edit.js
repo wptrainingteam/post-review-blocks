@@ -19,7 +19,7 @@ export default function Edit({
 	);
 
 	useEffect(() => {
-		const initStyle = meta?._ratingStyle ? meta?._ratingStyle : "heart";
+		const initStyle = meta?._ratingStyle ? meta?._ratingStyle : "star";
 		setAttributes({
 			rating: meta?._rating || 0,
 			ratingStyle: initStyle,
@@ -67,12 +67,12 @@ export default function Edit({
 						value={ratingStyle}
 						options={[
 							{
-								label: __("Heart", "multiblock-plugin"),
-								value: "heart",
-							},
-							{
 								label: __("Star", "multiblock-plugin"),
 								value: "star",
+							},
+							{
+								label: __("Heart", "multiblock-plugin"),
+								value: "heart",
 							},
 						]}
 					/>
