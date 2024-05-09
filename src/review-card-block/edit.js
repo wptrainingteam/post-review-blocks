@@ -3,7 +3,7 @@ import { InnerBlocks, useBlockProps } from "@wordpress/block-editor";
 import "./editor.scss";
 
 const MY_TEMPLATE = [
-	["core/post-title", { placeholder: "The Post Title" }],
+	["core/post-title", { isLink: true, placeholder: "The Post Title" }],
 	["create-block/rating-block", { placeholder: "The Post Title" }],
 	["core/post-excerpt", { placeholder: "The pose content..." }],
 ];

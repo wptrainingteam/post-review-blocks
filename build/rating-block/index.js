@@ -252,7 +252,7 @@ module.exports = window["wp"]["i18n"];
   \*************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/rating-block","version":"0.1.0","title":"Rating Block","category":"widgets","icon":"star-filled","description":"Example block scaffolded with Create Block tool.","supports":{"html":false},"textdomain":"rating-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js","usesContext":["postId","postType"],"attributes":{"rating":{"type":"integer","default":5},"ratingStyle":{"type":"string","default":"star"}},"example":{"attributes":{"rating":3,"ratingStyle":"star"}},"keywords":["star","rating"]}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/rating-block","version":"0.1.0","title":"Rating Block","category":"widgets","icon":"star-filled","description":"Example block scaffolded with Create Block tool.","supports":{"html":false},"textdomain":"rating-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","usesContext":["postId","postType"],"attributes":{"rating":{"type":"integer","default":5},"ratingStyle":{"type":"string","default":"star"}},"example":{"attributes":{"rating":3,"ratingStyle":"star"}},"keywords":["star","rating"]}');
 
 /***/ })
 
