@@ -30,6 +30,22 @@ function create_block_post_review_blocks_block_init() {
 }
 add_action( 'init', 'create_block_post_review_blocks_block_init' );
 
+function limit_rating_block_to_post_type( $allowed_block_types, $editor_context ) {
+	// Only allow paragraphs, headings, lists, and the rating block in the post editor for Posts.
+	if ( 'post' === $editor_context->post->post_type ) {
+		return array(
+			'core/paragraph',
+			'core/heading',
+			'core/list',
+			'create-block/rating-block'
+		);
+	}
+
+	return $allowed_block_types;
+}
+add_filter( 'allowed_block_types_all', 'limit_rating_block_to_post_type', 10, 2 );
+
+
 // Add some post meta
 add_action(
 	'init',
