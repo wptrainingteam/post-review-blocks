@@ -1,6 +1,4 @@
 <?php
-global $post;
-
 $ratingEmojis = '';
 
 // Get the rating and rating style from the post meta
