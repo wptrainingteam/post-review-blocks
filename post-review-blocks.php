@@ -23,6 +23,30 @@ function create_block_post_review_blocks_block_init() {
 }
 add_action( 'init', 'create_block_post_review_blocks_block_init' );
 
+// Add some post meta
+function register_review_rating_post_meta() {
+	$post_meta = array(
+		'_rating' => array( 'type' => 'integer'	),
+		'_ratingStyle' => array( 'type' => 'string'	),
+	);
+
+	foreach ( $post_meta as $meta_key => $args ) {
+		register_post_meta(
+			'post',
+			$meta_key,
+			array(
+				'show_in_rest' => true,
+				'single'       => true,
+				'type'         => $args['type'],
+				'auth_callback' => function() {
+					return current_user_can( 'edit_posts' );
+				}
+			)
+		);
+	}
+}
+add_action( 'init', 'register_review_rating_post_meta' );
+
 function limit_rating_block_to_post_type( $allowed_block_types, $editor_context ) {
 	// Only allow paragraphs, headings, lists, and the rating block in the post editor for Posts.
 	if ( 'post' === $editor_context->post->post_type ) {
@@ -37,35 +61,3 @@ function limit_rating_block_to_post_type( $allowed_block_types, $editor_context 
 	return $allowed_block_types;
 }
 add_filter( 'allowed_block_types_all', 'limit_rating_block_to_post_type', 10, 2 );
-
-
-// Add some post meta
-add_action(
-	'init',
-	function() {
-		register_post_meta(
-			'',
-			'_rating',
-			array(
-				'show_in_rest' => true,
-				'single'       => true,
-				'type'         => 'integer',
-                'auth_callback' => function() {
-                    return current_user_can( 'edit_posts' );
-                }
-			)
-		);
-		register_post_meta(
-			'',
-			'_ratingStyle',
-			array(
-				'show_in_rest' => true,
-				'single'       => true,
-				'type'         => 'string',
-                'auth_callback' => function() {
-                    return current_user_can( 'edit_posts' );
-                }
-			)
-		);
-	}
-);

@@ -15,22 +15,22 @@
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
 	"render": "file:./render.php",
-	"usesContext": [ "postId", "postType" ],
-  "attributes": {
-    "rating": {
-      "type": "integer",
-      "default": 5
-    },
-    "ratingStyle": {
-      "type": "string",
-      "default": "star"
-    }
-  },
-  "example": {
-    "attributes": {
-      "rating": 4,
-      "ratingStyle": "star"
-    }
-  },
-  "keywords": ["star", "rating", "review"]
+	"usesContext": ["postId", "postType"],
+	"attributes": {
+		"rating": {
+			"type": "integer",
+			"default": 5
+		},
+		"ratingStyle": {
+			"type": "string",
+			"default": "star"
+		}
+	},
+	"example": {
+		"attributes": {
+			"rating": 4,
+			"ratingStyle": "star"
+		}
+	},
+	"keywords": ["star", "rating", "review"]
 }

@@ -18,13 +18,5 @@
   "keywords": [
     "rating",
     "review"
-  ],
-  "parent": [
-    "core/post-template"
-  ],
-  "allowedBlocks": [
-    "core/post-title",
-    "create-block/rating-block",
-    "core/post-excerpt"
   ]
 }

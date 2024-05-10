@@ -171,7 +171,7 @@ module.exports = window["wp"]["i18n"];
   \******************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/review-card-block","version":"0.1.0","title":"Review Card Block","category":"widgets","icon":"smiley","description":"A review card with defaults for posts in the query loop.","example":{},"supports":{"html":false},"textdomain":"review-card-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","keywords":["rating","review"],"parent":["core/post-template"],"allowedBlocks":["core/post-title","create-block/rating-block","core/post-excerpt"]}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/review-card-block","version":"0.1.0","title":"Review Card Block","category":"widgets","icon":"smiley","description":"A review card with defaults for posts in the query loop.","example":{},"supports":{"html":false},"textdomain":"review-card-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","keywords":["rating","review"]}');
 
 /***/ })
 
